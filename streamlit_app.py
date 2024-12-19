@@ -38,3 +38,9 @@ if time_to_insert:
 
 cnx = st.connection("snowflake")
 session = cnx.session()
+
+
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
+
