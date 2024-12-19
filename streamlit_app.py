@@ -42,14 +42,9 @@ session = cnx.session()
 
 import requests
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response)
+st.text(smoothiefroot_response.json())
 
-try:
-    session = Session.builder.configs(connection_params).create()
-    st.success("Successfully connected to Snowflake!")
-except Exception as e:
-    st.error("Failed to connect to Snowflake. Check your connection settings.")
-    st.write(e)
+
 
 
 
